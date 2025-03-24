@@ -611,7 +611,7 @@ def create_donor_retention_analysis(df):
 @st.cache_data
 def create_sentiment_analysis(df):
     """
-    Crée des visualisations pour l'analyse de sentiment des commentaires des donneurs.
+    #Crée des visualisations pour l'analyse de sentiment des commentaires des donneurs.
     """
     # Vérifier si une colonne de commentaires est disponible
     comment_columns = [col for col in df.columns if any(term in col.lower() for term in 
@@ -717,7 +717,7 @@ def main():
     #image_file=r"C:\Users\hp\Desktop\Projet dashboard\WhatsApp Image 2025-03-23 à 22.21.36_abdc063e.jpg"
     #set_background(image_file)
     """
-    Fonction principale qui crée l'interface du tableau de bord Streamlit.
+    #Fonction principale qui crée l'interface du tableau de bord Streamlit.
     """
     # Titre et introduction
     st.title("📊 Tableau de Bord d'Analyse des Donneurs de Sang")
