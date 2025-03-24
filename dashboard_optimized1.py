@@ -90,8 +90,8 @@ def load_data():
     """
     df_2019 = pd.read_csv(data_2019_path)
     df_volontaire = pd.read_csv(data_volontaire_path)
-    df=pd.read_csv("Challenge dataset traité.csv")
-    df_volontaires=pd.read_csv("Challenge dataset traité.csv")
+    df=pd.read_csv("Challenge_dataset_traité.csv")
+    df_volontaires=pd.read_csv("Challenge_dataset_traité.csv")
     
     # Convertir les colonnes de dates au format datetime
     date_columns = [col for col in df_2019.columns if 'date' in col.lower()]
@@ -1159,7 +1159,7 @@ def main():
     elif page == "Analyse de sentiment":
         st.header("💬 Analyse de sentiment des retours")
         #paths=os.path.join(os.getcwd(),"Challenge dataset traité.xlsx")
-        paths="Challenge dataset traité.csv"
+        paths="Challenge_dataset_traité.csv"
         df=pd.read_csv(paths)
         df_volontaires=pd.read_csv(paths)
         sia = SentimentIntensityAnalyzer()
@@ -1223,7 +1223,7 @@ def main():
             Ce modèle prédit si un donneur est éligible ou non en fonction de ses caractéristiques médicales et personnelles.
             Remplissez les informations ci-dessous pour obtenir une prédiction.
         """)
-            df=pd.read_csv("Challenge dataset traité.csv")
+            df=pd.read_csv("Challenge_dataset_traité.csv")
             # ==============================
             # 📌 FORMULAIRE DE SAISIE
             # ==============================
