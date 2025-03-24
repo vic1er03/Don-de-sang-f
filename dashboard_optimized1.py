@@ -198,8 +198,7 @@ def create_geo_map(df, location_column, color_column=None, zoom_start=10):
 # Fonction pour créer un graphique de santé et éligibilité
 @st.cache_data
 def create_health_eligibility_chart(df):
-    """
-    Crée un graphique interactif montrant l'impact des conditions de santé sur l'éligibilité au don.
+    """Crée un graphique interactif montrant l'impact des conditions de santé sur l'éligibilité au don.
     """
     # Identifier les colonnes de conditions de santé
     health_columns = [col for col in df.columns if any(term in col for term in 
