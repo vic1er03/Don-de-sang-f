@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
 st.title("vic")
-data=pd.read_csv("Challenge_dataset_traité.csv")
+paths="Challenge_dataset_traité.csv"
+data=pd.read_csv(paths)
 st.DataFrame(data)
