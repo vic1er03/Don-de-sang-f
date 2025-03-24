@@ -87,11 +87,12 @@ data_volontaire_path = "data_volontaire_preprocessed.csv"
 def load_data():
     """
     Charge les données prétraitées à partir des fichiers CSV.
-    """
+    ""
+    patr="Challenge_dataset_traité.csv"
     df_2019 = pd.read_csv(data_2019_path)
     df_volontaire = pd.read_csv(data_volontaire_path)
-    df=pd.read_csv("Challenge_dataset_traité.csv")
-    df_volontaires=pd.read_csv("Challenge_dataset_traité.csv")
+    df=pd.read_csv(patr)
+    df_volontaires=pd.read_csv(patr)
     
     # Convertir les colonnes de dates au format datetime
     date_columns = [col for col in df_2019.columns if 'date' in col.lower()]
