@@ -256,7 +256,7 @@ def create_health_eligibility_chart(df):
 @st.cache_data
 def create_donor_clustering(df):
     """
-    Crée une visualisation interactive des clusters de donneurs.
+    #Crée une visualisation interactive des clusters de donneurs.
     """
     # Sélectionner les variables numériques pour le clustering
     numeric_df = df.select_dtypes(include=['int64', 'float64'])
