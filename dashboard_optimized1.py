@@ -1268,7 +1268,6 @@ def main():
                     ")
                 else:
                     st.write(""" Le donneur est prédit comme définitivement non éligible au don de sang. Voici quelques recommandations:
-                    
                     - Expliquer avec tact les raisons de l inéligibilité
                     - Suggérer d'autres moyens de contribuer aux campagnes de don
                     - Fournir des ressources éducatives sur l'importance du don de sang
