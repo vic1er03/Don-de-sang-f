@@ -90,8 +90,8 @@ def load_data():
     """
     df_2019 = pd.read_csv(data_2019_path)
     df_volontaire = pd.read_csv(data_volontaire_path)
-    df=pd.read_excel(r"C:\Users\hp\Desktop\Projet dashboard\Challenge dataset traité.xlsx")
-    df_volontaires=pd.read_excel(r"C:\Users\hp\Desktop\Projet dashboard\Challenge dataset traité.xlsx")
+    df=pd.read_excel("Challenge dataset traité.xlsx")
+    df_volontaires=pd.read_excel("Challenge dataset traité.xlsx")
     
     # Convertir les colonnes de dates au format datetime
     date_columns = [col for col in df_2019.columns if 'date' in col.lower()]
