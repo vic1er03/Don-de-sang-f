@@ -465,7 +465,7 @@ def create_campaign_analysis(df):
 @st.cache_data
 def create_donor_retention_analysis(df):
     """
-    Crée des visualisations pour analyser la fidélisation des donneurs.
+    #Crée des visualisations pour analyser la fidélisation des donneurs.
     """
     # Vérifier si la colonne indiquant si le donneur a déjà donné est disponible
     if 'A-t-il_(elle)_déjà_donné_le_sang_' in df.columns:
