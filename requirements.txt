@@ -1,3 +1,17 @@
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+folium
+streamlit-folium
+geopandas
+scikit-learn
+joblib
+nltk
+textblob
+wordcloud
 pandas==2.0.3
 textblob==0.19.0
 matplotlib==3.7.2
