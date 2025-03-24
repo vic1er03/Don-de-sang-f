@@ -84,9 +84,9 @@ data_volontaire_path = "data_volontaire_preprocessed.csv"
 @st.cache_data(ttl=3600, max_entries=2)
 
 def load_data():
-    """
-    Charge les données prétraitées à partir des fichiers CSV.
-    ""
+    
+    #Charge les données prétraitées à partir des fichiers CSV.
+    
     patr="Challenge_dataset_traité.csv"
     df_2019 = pd.read_csv(data_2019_path)
     df_volontaire = pd.read_csv(data_volontaire_path)
@@ -115,9 +115,9 @@ def load_data():
 # Fonction pour créer une carte de distribution géographique
 @st.cache_data
 def create_geo_map(df, location_column, color_column=None, zoom_start=10):
-    """
+    
     #Crée une carte interactive montrant la distribution géographique des donneurs.
-    """
+    
     # Coordonnées approximatives pour Douala, Cameroun
     douala_coords = [4.0511, 9.7679]
     
@@ -198,8 +198,8 @@ def create_geo_map(df, location_column, color_column=None, zoom_start=10):
 # Fonction pour créer un graphique de santé et éligibilité
 @st.cache_data
 def create_health_eligibility_chart(df):
-    """#Crée un graphique interactif montrant l'impact des conditions de santé sur l'éligibilité au don.
-    """
+    #Crée un graphique interactif montrant l'impact des conditions de santé sur l'éligibilité au don.
+    
     # Identifier les colonnes de conditions de santé
     health_columns = [col for col in df.columns if any(term in col for term in 
                      ['Porteur', 'Opéré', 'Drepanocytaire', 'Diabétique', 'Hypertendus', 
@@ -255,9 +255,9 @@ def create_health_eligibility_chart(df):
 # Fonction pour créer un graphique de clustering des donneurs
 @st.cache_data
 def create_donor_clustering(df):
-    """
+    
     #Crée une visualisation interactive des clusters de donneurs.
-    """
+    
     # Sélectionner les variables numériques pour le clustering
     numeric_df = df.select_dtypes(include=['int64', 'float64'])
     
@@ -349,9 +349,9 @@ def create_donor_clustering(df):
 # Fonction pour créer un graphique d'analyse de campagne
 @st.cache_data
 def create_campaign_analysis(df):
-    """
+    
     #Crée des visualisations pour analyser l'efficacité des campagnes de don.
-    """
+    
     # Identifier les colonnes de date
     date_columns = [col for col in df.columns if 'date' in col.lower()]
     
@@ -464,9 +464,9 @@ def create_campaign_analysis(df):
 # Fonction pour créer une analyse de fidélisation des donneurs
 @st.cache_data
 def create_donor_retention_analysis(df):
-    """
+    
     #Crée des visualisations pour analyser la fidélisation des donneurs.
-    """
+    
     # Vérifier si la colonne indiquant si le donneur a déjà donné est disponible
     if 'A-t-il_(elle)_déjà_donné_le_sang_' in df.columns:
         # Compter le nombre de donneurs qui ont déjà donné et ceux qui n'ont pas donné
@@ -1123,8 +1123,7 @@ def main():
             # Ajouter des stratégies pour améliorer la fidélisation
             st.subheader("Stratégies pour améliorer la fidélisation des donneurs")
             
-            st.write("""
-            Voici quelques stratégies pour améliorer la fidélisation des donneurs de sang:
+            st.write("Voici quelques stratégies pour améliorer la fidélisation des donneurs de sang:
             
             1. **Programme de reconnaissance**: Mettre en place un système de reconnaissance pour les donneurs réguliers (badges, certificats, etc.).
             
@@ -1135,7 +1134,7 @@ def main():
             4. **Éducation continue**: Informer les donneurs sur l impact de leur don et l importance de donner régulièrement.
             
             5. **Événements communautaires**: Organiser des événements spéciaux pour les donneurs réguliers afin de renforcer leur engagement.
-            """)
+            ")
         else:
             st.warning("Impossible d'analyser la fidélisation car les informations nécessaires ne sont pas disponibles dans les données.")
     
@@ -1202,10 +1201,9 @@ def main():
             col1,col2,col3=st.columns(3)
             st.subheader("🔄 Faire une prédiction individuelle")
 
-            st.write("""
-            Ce modèle prédit si un donneur est éligible ou non en fonction de ses caractéristiques médicales et personnelles.
+            st.write("Ce modèle prédit si un donneur est éligible ou non en fonction de ses caractéristiques médicales et personnelles.
             Remplissez les informations ci-dessous pour obtenir une prédiction.
-        """)
+        ")
             df=pd.read_csv("Challenge_dataset_traité.csv")
             # ==============================
             # 📌 FORMULAIRE DE SAISIE
@@ -1261,23 +1259,22 @@ def main():
                         - Encourager le donneur à procéder au don
                         - Fournir des informations sur le processus de don
                         - Proposer un rendez-vous pour le don
-                        """)
+                        ")
                 elif prediction == 0 :
-                    st.write("""
-                    Le donneur est prédit comme temporairement non éligible au don de sang. Voici quelques recommandations:
+                    st.write("Le donneur est prédit comme temporairement non éligible au don de sang. Voici quelques recommandations:
                     
-                    - Expliquer les raisons potentielles de l'inéligibilité temporaire
+                    - Expliquer les raisons potentielles de l inéligibilité temporaire
                     - Suggérer une période d'attente appropriée
-                    - Proposer un rendez-vous de suivi après la période d'attente
-                    """)
+                    - Proposer un rendez-vous de suivi après la période  d attente
+                    ")
                 else:
-                    st.write("""
+                    st.write("
                     Le donneur est prédit comme définitivement non éligible au don de sang. Voici quelques recommandations:
                     
-                    - Expliquer avec tact les raisons de l'inéligibilité
+                    - Expliquer avec tact les raisons de l inéligibilité
                     - Suggérer d'autres moyens de contribuer aux campagnes de don
                     - Fournir des ressources éducatives sur l'importance du don de sang
-                    """)
+                    ")
 
 
                 # Affichage du résultat
@@ -1540,12 +1537,12 @@ def main():
     
     # Pied de page
     st.markdown("---")
-    st.markdown("""
+    st.markdown("
     <div style="text-align: center;">
         <p>Tableau de bord développé pour le concours de data visualisation sur les donneurs de sang</p>
         <p>© 2025 - Tous droits réservés</p>
     </div>
-    """, unsafe_allow_html=True)
+    ", unsafe_allow_html=True)
 
 # Point d'entrée principal
 if __name__ == "__main__":
