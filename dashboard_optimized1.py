@@ -700,15 +700,14 @@ def create_sentiment_analysis(df):
 def main():
     #image_file=r"C:\Users\hp\Desktop\Projet dashboard\WhatsApp Image 2025-03-23 à 22.21.36_abdc063e.jpg"
     #set_background(image_file)
-    """
+    
     #Fonction principale qui crée l'interface du tableau de bord Streamlit.
-    """
+    
     # Titre et introduction
     st.title("📊 Tableau de Bord d'Analyse des Donneurs de Sang")
-    st.markdown("""
-    Ce tableau de bord interactif présente une analyse approfondie des données de donneurs de sang,
+    st.markdown("Ce tableau de bord interactif présente une analyse approfondie des données de donneurs de sang,
     permettant d'optimiser les campagnes de don et d'améliorer la gestion des donneurs.
-    """)
+    ")
     
     # Charger les données
     df_2019, df_volontaire,df,df_volontaires=load_data()
