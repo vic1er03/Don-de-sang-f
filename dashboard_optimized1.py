@@ -608,9 +608,7 @@ def create_donor_retention_analysis(df):
 # Fonction pour créer une analyse de sentiment
 @st.cache_data
 def create_sentiment_analysis(df):
-    """
     #Crée des visualisations pour l'analyse de sentiment des commentaires des donneurs.
-    """
     # Vérifier si une colonne de commentaires est disponible
     comment_columns = [col for col in df.columns if any(term in col.lower() for term in 
                       ['préciser', 'raison', 'commentaire', 'feedback'])]
