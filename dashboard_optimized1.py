@@ -693,18 +693,6 @@ def create_sentiment_analysis(df):
     else:
         return None, None, None
 
-def set_background(image_file):
-    with open(image_file, "rb") as f:
-        encoded_string = base64.b64encode(f.read()).decode()
-    bg_image = f"""
-    <style>
-    .stApp {{
-        background-image: url("data:image/png;base64,{encoded_string}");
-        background-size: cover;
-    }}
-    </style>
-    """
-    return st.markdown(bg_image, unsafe_allow_html=True)
 
 
 
