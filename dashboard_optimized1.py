@@ -1200,9 +1200,9 @@ def main():
             col1,col2,col3=st.columns(3)
             st.subheader("🔄 Faire une prédiction individuelle")
 
-            st.write("Ce modèle prédit si un donneur est éligible ou non en fonction de ses caractéristiques médicales et personnelles.
+            st.write("""Ce modèle prédit si un donneur est éligible ou non en fonction de ses caractéristiques médicales et personnelles.
             Remplissez les informations ci-dessous pour obtenir une prédiction.
-        ")
+        """)
             df=pd.read_csv("Challenge_dataset_traité.csv")
             # ==============================
             # 📌 FORMULAIRE DE SAISIE
@@ -1267,13 +1267,12 @@ def main():
                     - Proposer un rendez-vous de suivi après la période  d attente
                     ")
                 else:
-                    st.write("
-                    Le donneur est prédit comme définitivement non éligible au don de sang. Voici quelques recommandations:
+                    st.write(""" Le donneur est prédit comme définitivement non éligible au don de sang. Voici quelques recommandations:
                     
                     - Expliquer avec tact les raisons de l inéligibilité
                     - Suggérer d'autres moyens de contribuer aux campagnes de don
                     - Fournir des ressources éducatives sur l'importance du don de sang
-                    ")
+                    """)
 
 
                 # Affichage du résultat
@@ -1536,8 +1535,7 @@ def main():
     
     # Pied de page
     st.markdown("---")
-    st.markdown("""
-    <div style="text-align: center;">
+    st.markdown(""" <div style="text-align: center;">
         <p>Tableau de bord développé pour le concours de data visualisation sur les donneurs de sang</p>
         <p>© 2025 - Tous droits réservés</p>
     </div>
