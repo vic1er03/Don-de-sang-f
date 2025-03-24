@@ -352,7 +352,7 @@ def create_donor_clustering(df):
 @st.cache_data
 def create_campaign_analysis(df):
     """
-    Crée des visualisations pour analyser l'efficacité des campagnes de don.
+    #Crée des visualisations pour analyser l'efficacité des campagnes de don.
     """
     # Identifier les colonnes de date
     date_columns = [col for col in df.columns if 'date' in col.lower()]
