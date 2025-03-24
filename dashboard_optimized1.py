@@ -705,9 +705,9 @@ def main():
     
     # Titre et introduction
     st.title("📊 Tableau de Bord d'Analyse des Donneurs de Sang")
-    st.markdown("Ce tableau de bord interactif présente une analyse approfondie des données de donneurs de sang,
+    st.markdown("""Ce tableau de bord interactif présente une analyse approfondie des données de donneurs de sang,
     permettant d'optimiser les campagnes de don et d'améliorer la gestion des donneurs.
-    ")
+    """)
     
     # Charger les données
     df_2019, df_volontaire,df,df_volontaires=load_data()
@@ -1537,12 +1537,12 @@ def main():
     
     # Pied de page
     st.markdown("---")
-    st.markdown("
+    st.markdown("""
     <div style="text-align: center;">
         <p>Tableau de bord développé pour le concours de data visualisation sur les donneurs de sang</p>
         <p>© 2025 - Tous droits réservés</p>
     </div>
-    ", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
 # Point d'entrée principal
 if __name__ == "__main__":
