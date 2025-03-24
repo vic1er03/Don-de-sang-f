@@ -1087,7 +1087,7 @@ def main():
             # Ajouter des recommandations pour l'optimisation des campagnes
             st.subheader("Recommandations pour l'optimisation des campagnes")
             
-            st.write("Sur la base de l'analyse des données, voici quelques recommandations pour optimiser les futures campagnes de don de sang:
+            st.write("Sur la base de l analyse des données, voici quelques recommandations pour optimiser les futures campagnes de don de sang:
             
             1. **Ciblage démographique**: Concentrez les efforts sur les segments de population les plus susceptibles de donner, comme identifié dans l'analyse des profils.
             
