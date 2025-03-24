@@ -1146,9 +1146,9 @@ def main():
             
             2. **Communication personnalisée**: Envoyer des rappels personnalisés aux donneurs en fonction de leur historique de don.
             
-            3. **Expérience positive**: Améliorer l'expérience du donneur pendant le processus de don pour encourager le retour.
+            3. **Expérience positive**: Améliorer l expérience du donneur pendant le processus de don pour encourager le retour.
             
-            4. **Éducation continue**: Informer les donneurs sur l'impact de leur don et l'importance de donner régulièrement.
+            4. **Éducation continue**: Informer les donneurs sur l impact de leur don et l importance de donner régulièrement.
             
             5. **Événements communautaires**: Organiser des événements spéciaux pour les donneurs réguliers afin de renforcer leur engagement.
             """)
