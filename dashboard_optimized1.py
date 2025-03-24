@@ -1103,7 +1103,7 @@ def main():
             # Ajouter des recommandations pour l'optimisation des campagnes
             st.subheader("Recommandations pour l'optimisation des campagnes")
             
-            st.write("""Sur la base de l'analyse des données, voici quelques recommandations pour optimiser les futures campagnes de don de sang:
+            st.write("Sur la base de l'analyse des données, voici quelques recommandations pour optimiser les futures campagnes de don de sang:
             
             1. **Ciblage démographique**: Concentrez les efforts sur les segments de population les plus susceptibles de donner, comme identifié dans l'analyse des profils.
             
@@ -1114,7 +1114,7 @@ def main():
             4. **Sensibilisation ciblée**: Développez des messages spécifiques pour les groupes sous-représentés afin d'augmenter leur participation.
             
             5. **Fidélisation**: Mettez en place des stratégies pour encourager les donneurs à revenir régulièrement.
-            """)
+            ")
         else:
             st.warning("Impossible d'analyser les tendances temporelles car aucune colonne de date appropriée n'a été identifiée.")
     
