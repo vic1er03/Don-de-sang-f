@@ -116,7 +116,7 @@ def load_data():
 @st.cache_data
 def create_geo_map(df, location_column, color_column=None, zoom_start=10):
     """
-    Crée une carte interactive montrant la distribution géographique des donneurs.
+    #Crée une carte interactive montrant la distribution géographique des donneurs.
     """
     # Coordonnées approximatives pour Douala, Cameroun
     douala_coords = [4.0511, 9.7679]
