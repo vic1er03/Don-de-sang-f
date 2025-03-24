@@ -11,4 +11,4 @@ geopandas==1.0.1
 plotly==5.9.0
 streamlit_folium==0.24.0
 streamlit==1.43.2
-scikit-learn==1.2.2
+scikit-learn==1.6.1
